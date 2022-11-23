@@ -1,0 +1,527 @@
+/*--------------------Variables--------------------*/
+:root {
+    --bg-color: #ebebeb;
+    --input-placeholder: #d4d4d4;
+    --input-bg: #efefef;
+    --texto-destaque: #FFFF;
+    --azul-destaque: #2a7ae4;
+    --bg-contacto: #adaead;
+    --verde-destaque: #03c126;
+    --sombra-destaque: #3f3f3f;
+
+  }
+
+
+/*--------------------Normalize--------------------*/
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Releway', sans-serif;*/
+    font-family: 'McLaren', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
+    /*background-color: var(--bg-color);*/
+}
+
+/*--------------------Patrón del proyecto--------------------*/
+textarea:focus, input:focus {
+    box-shadow:0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+input::placeholder, textarea::placeholder{
+    color: var(--input-placeholder);
+    padding: 2%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--azul-destaque);
+    font-weight: 800;
+}
+
+button{
+    cursor: pointer;
+}
+
+/*--------------------Header General--------------------*/
+
+header{
+  background-color: var(--texto-destaque);
+  padding: 32.5px 105px;
+}
+
+nav{
+  
+  display: flex;
+  align-items: center;
+}
+
+/*--------------------Divs del Header--------------------*/
+
+.logo-busqueda {
+  
+  margin-left: 150px;
+  width: 710px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+    .logo{
+      
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img{
+      height: 150px;
+      width: 300px;
+    }
+
+    .logo .logo-azul{
+      margin-left: 10px;
+      color: var(--azul-destaque);
+    }
+
+    .logo-busqueda input{
+      margin-left: 10%;
+      width: 395px;
+      height: 40px;
+      border-radius: 30px;
+      padding: 1% 2%;
+      border: none;
+      background-color: var(--input-bg);
+      background-image: url(assets/lupa.png);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-position-x: 300px;
+    }
+
+    .login{
+      width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+
+    .login button{
+      width: 180px;
+      height: 50px;
+      background: var(--bg-contacto);
+      border: 3px solid var(--azul-destaque);
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .login button:hover{
+        background-color: var(--verde-destaque);
+        color: var(--texto-destaque);
+    }
+
+/*--------------------Banner Promocional--------------------*/
+
+.destaque{
+    height: 352px;
+    width: 110%;
+    background-image: url(img/perchas.png);
+    background-size: 104vw;
+    background-repeat: no-repeat;
+    padding: 32px;
+    text-align: center;
+}
+
+    .banner{
+      
+      width: 800px;
+      height: 320px;
+      padding-left: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+
+    .banner h1{
+        color: var(--texto-destaque);
+        font-size: 80px;
+        font-weight: bold;
+        text-shadow: 10px 5px 5px var(--sombra-destaque);
+    }
+    .banner h4{
+      color: var(--texto-destaque);
+      font-size: 30px;
+      font-weight: bold; 
+    }
+    
+    .oferta{
+      font-size: 30px;
+      color: var(--verde-destaque);
+      font-weight: bolder;
+      text-align: center;
+      
+    }
+    .banner button{
+        background-color: var(--azul-destaque);
+        border: none;
+        color: var(--texto-destaque);
+        height: 51px;
+        width: 130px;
+    }
+
+/*--------------------Sección de productos--------------------*/
+
+.geral-prods{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 15%;
+  
+
+}
+.produto{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 15px;
+  
+  
+}
+/*-----------------Divs en la Sección de Productos-------------*/
+
+
+
+    .prod-titulo{
+          
+          display: flex;
+          justify-content: space-around;
+          text-align: center;
+          width: 350%;
+          
+    }
+
+    .prod-titulo .titulo{
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      
+    }
+
+    .mostrar-mas{
+    
+      font-weight: bold;
+      margin-top: 2px;
+      color: var(--bg-color);
+      text-align: center;
+      
+    }
+
+    .seccion-productos{
+      background: var(--sombra-destaque);
+      height: 310px;
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      /*margin-bottom: 50px;*/
+      padding: 10%;
+    }
+    .descrição{
+      color: var(--bg-color);
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow:2px 5px 5px black;
+    }
+    .preco{
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--verde-destaque);
+      margin-left: 15px;
+      
+    }
+    .lupa{
+      font-size: 30px;
+      padding: 5%;
+    }
+
+/*--------------------Form Contacto--------------------*/
+
+.contacto{
+    background-color: var(--bg-contacto);
+    background-size: 104vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: 365px;
+    justify-content: center;
+    padding: 64px;
+}
+
+  .referencia{
+    display: flex;
+    width: 350px;
+    margin: 20px 0 0 0;
+}
+  .referencia img{
+    width: 50px;
+    height: 80px;
+}
+
+  .referencia p{
+    font-size: 26px;
+    font-weight: bolder;
+    color: var(--azul-destaque);
+    margin-top: 5px;
+    margin-left: 6px;
+}
+
+  .links-utiles{
+    line-height: 40px;
+    width: 200px;
+    padding: 60px;
+}
+
+  .links-utiles a{
+    color: black;
+    font-weight: normal;
+}
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 500px;
+    
+}
+
+  .form p{
+    font-weight: bolder;
+}
+
+  .form input{
+    
+    width: 475px;
+    position: relative;
+    height: 56px;
+    border: transparent;
+    margin-bottom: 20px;
+    box-sizing: content-box;
+    padding: 0.5% 2.7%;
+    color: var(--azul-destaque);
+}
+
+  .form input:hover{
+    border-bottom: solid 2px var(--azul-destaque);
+    transition: linear 1s;
+}
+
+  .label-nombre{
+    width: 100%;
+    position: absolute;
+    color: var(--input-placeholder);
+    top: 80px; left: 9px;
+    transition: 0.5s;                
+}
+    
+  .input-nombre:focus + .label-nombre{
+    top: 64px;
+    font-size: 14px;
+    z-index: 2;
+    transition: 0.2s; 
+    color: var(--azul-destaque); 
+}
+
+  .form textarea{
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    border: transparent;
+    color: var(--azul-destaque);
+    margin-bottom: 20px;
+}
+
+  .form button{
+    background-color: var(--azul-destaque);
+    border: none;
+    color: var(--texto-destaque);
+    height: 51px;
+    width: 180px;
+}
+  .form-control{
+      
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-left: 10%;
+}
+  .pie{
+  background-color: var(--bg-contacto);
+}
+  .container-login{
+    background: var(--bg-contacto);
+    display: flex;
+    flex-wrap: wrap;
+    height: 365px;
+    width: 1205px;
+  /*justify-content: center;*/
+    padding: 64px;
+}
+  .form-control{
+    font-size: 30px;
+}
+  .form1{
+    font-size: 24px;
+    width: 600px;
+    padding: 2%;
+    margin-bottom: 5%;
+}
+  .btn{
+    font-size: 24px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px 3px;
+    text-align: center;
+    background: var(--azul-destaque);
+    transition: 1s all;
+    cursor: pointer;
+}
+  .btn:hover{
+    background: var(--verde-destaque)
+    transform scale(1.2);
+}
+
+    /*Tablet*/
+@media screen and (max-width:768px){
+  .cabeza{
+    display: flex;
+    flex-wrap: wrap ;
+  }
+  .logo img{
+    transform: scale(.7);
+    display:inline-block;
+    position: relative;
+  }
+  .logo-busqueda input{
+    display: none;
+    position: absolute;
+    margin-left: 0;
+  }
+  .destaque{
+    background-image: url(img/ropa2_varios.png);
+    size: 104vmax;
+    text-align: center;
+}
+.login{
+    text-align: center;
+}
+.login button{
+  width: 120px;
+  height: 40px;
+}
+.destaque{
+  text-align: start;
+  justify-content: center;
+}
+h1{
+  position: absolute;
+  text-align: left;
+  transform: scale(.7);
+}
+h2{
+  transform: scale(.7);
+}
+h4{
+  display: none;
+}
+.oferta{
+  font-size: 26;
+  text-align: start;
+}
+.seccion-productos{
+  background: none;
+  display: flex;
+  flex-direction: wrap;
+  padding: 20%;
+  transform: scale(.7);
+  margin: left;
+}
+.produto{
+  display: flex;
+  flex-direction: wrap;
+  margin-right: 15px;
+}
+.descrição{
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow:2px 5px 5px black;
+}
+.contacto{
+  background: white;
+  display: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.links-utiles{
+  display: none;
+}
+.form{
+  background: var(--bg-contacto);
+  display: flex;
+  flex-direction: column;
+  position: central;
+  text-align: center;
+  box-shadow: 2px 2px 5px #3f3f3f;
+}
+
+}
+
+
+@media screen and (max-width:410px){
+  .destaque{
+    margin-left: 40%;
+  }
+  .banner{
+    display: block;
+    text-align:left;
+  }
+  h1{
+    display: none;
+  }
+  
+  
+  .geral-prods{
+   height: 120%;
+   width: 100%;
+   padding: 10%;
+  
+  }
+  .prod-titulo{
+    display: none;
+  }
+
+
+  .seccion-productos{
+    display: grid;
+    grid-template-columns: 55% 55% 55%;
+    grid-template-rows: 110% 110%;
+    transform: scale(.6);
+  
+    /*display: flex;
+    flex-direction: wrap;*/
+    padding: 15%;
+   
+  }
+  .prod-holder{
+    width: 210px;
+    height: 210px;
+    padding: 15px;
+  }
+  .contacto{
+    margin-left: 70%;
+  }
+  .form{
+    transform: scale(.8);
+  }
+
+}
+
+    
